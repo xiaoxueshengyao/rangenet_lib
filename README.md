@@ -72,6 +72,8 @@ To infer a single LiDAR scan and visualize the semantic point cloud:
   # use --verbose or -v to get verbose mode
   $ ./devel/lib/rangenet_lib/infer -h # help
   $ ./devel/lib/rangenet_lib/infer -p /path/to/the/pretrained/model -s /path/to/the/scan.bin --verbose
+  # add process multi scans bin for kitti
+  $ ./devel/lib/rangenet_lib/infer_all -s src/data/kitti -m src/semantic_suma/darknet53 --verbose
   ```
 
 **Notice**: for the first time running, it will take several minutes to generate a `.trt` model for C++ interface.
