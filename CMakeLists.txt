@@ -169,6 +169,16 @@ if(EXAMPLE)
                                   ${YAML_CPP_LIBRARIES}
                                   ${TENSORRT_LIBRARIES}
                                   )
+    include_directories(${OpenCV_INCLUDE_DIRS})
+    add_executable(infer_all example/infer_all.cpp)
+    target_link_libraries(infer_all   rangenet_lib
+                                  ${catkin_LIBRARIES}
+                                  ${OpenCV_LIBRARIES}
+                                  ${Boost_LIBRARIES}
+                                  ${YAML_CPP_LIBRARIES}
+                                  ${TENSORRT_LIBRARIES}
+    )
+    
     install(
       TARGETS
       infer
